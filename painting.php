@@ -26,7 +26,7 @@ $painting=$painting['results']['bindings'][0];
 <body>
 <?php
 echo '<h3>', $painting['name']['value'], '</h3>';
-echo '<div class="pic"><a href="', $painting['depiction']['value'], '" alt="" title="Afficher en plus grand" /><img src="', str_replace('200px', '1024px', $painting['thumb']['value']), '" alt="" /></a></div>';
+echo '<div class="pic"><a href="', $painting['depiction']['value'], '" alt="" title="Afficher en plus grand" /><img src="', str_replace('http://', 'https://', str_replace('200px', '1024px', $painting['thumb']['value'])), '" alt="" /></a></div>';
 echo '<p>', $painting['abstract']['value'], '</p>';
 
 ?>

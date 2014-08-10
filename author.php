@@ -19,7 +19,7 @@ foreach ($paintings['results']['bindings'] as $painting) {
     ?>
     <li>
     <?php
-    echo '<a href="painting.php?painting=', urlencode($painting['painting']['value']), '"><img src="', $painting['thumb']['value'], '" alt="" />';
+    echo '<a href="painting.php?painting=', urlencode($painting['painting']['value']), '"><img src="', str_replace('http://', 'https://', $painting['thumb']['value']), '" alt="" />';
     echo '<h3>', $painting['name']['value'], '</h3></a>';
     ?>
     </li>
